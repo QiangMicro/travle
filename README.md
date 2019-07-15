@@ -21,3 +21,5 @@ vue项目总结
 四、css预处理器：定义了一种新的语言将Css作为目标生成文件，有less、Sass以及styl, stylus书写如下：
 
   <style lang='stylus' scoped></style> scoped为了避免样式被复用
+
+五、安装轮播图插件vue-awesome-swiper   具体使用方法见链接：https://blog.csdn.net/u014027876/article/details/81663080
