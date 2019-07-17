@@ -59,9 +59,10 @@ export default {
 </script>
 <style lang="stylus" scoped>
  @import '~@/assets/style/mixins.styl';
+ @import '~@/assets/style/varibles.styl';
   .recommend-title
     line-height .8rem
-    background #eeeeee
+    background $bgTtitle
     text-text-indent .2rem
     color: #212121;
     font-size: .32rem;
