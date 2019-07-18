@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title ">猜你喜欢</div>
     <ul>
-      <li class="item border-bottom" v-for='item of itemlist ' :key='item.id'>
+      <li class="item border-bottom" v-for='item of Recommendlist ' :key='item.id'>
         <img class="item-img" 
           :src="item.imgURL"
           :alt="item.title" />
@@ -21,7 +21,7 @@ export default {
   name:'HomeRecommended',
   data (){
     return {
-      itemlist:[
+      Recommendlist:[
         {
           id:'001',
           imgURL:'https://imgs.qunarzz.com/sight/p0/1508/89/895a1b7add84f23faca053ce9e3153db.water.jpg_200x200_99ae30ee.jpg',

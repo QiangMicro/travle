@@ -2,7 +2,7 @@
   <div>
     <div class="recommend-title ">周末去那儿</div>
     <ul>
-      <li class="item border-bottom" v-for='item of itemlist ' :key='item.id'>
+      <li class="item border-bottom" v-for='item of Weeklist ' :key='item.id'>
         <div class="item-img-wrapper">
           <img class="item-img" 
             :src="item.imgURL"
@@ -22,7 +22,7 @@ export default {
   name:'HomeRecommended',
   data (){
     return {
-      itemlist:[
+      Weeklist:[
         {
           id:'001',
           imgURL:'https://imgs.qunarzz.com/sight/source/1811/f3/86173f863bef61.jpg_r_640x214_52b003ac.jpg',

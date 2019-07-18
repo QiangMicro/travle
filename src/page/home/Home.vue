@@ -24,6 +24,19 @@ export default {
     HomeIcon,
     HomeRecommended,
     HomeWeeked
+  },
+  methods:{
+    getHomeInfo(){
+      axios.get('/api/Homedata.json')
+        .then(this.getHomeJson)
+        .catch(()=>{console.log('数据请求失败')})
+    },
+    getHomeJson(res){
+      console.log(res)
+    }
+  },
+  mounted(){
+    this.getHomeInfo()
   }
 }
 </script>

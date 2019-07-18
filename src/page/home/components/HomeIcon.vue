@@ -147,7 +147,7 @@ export default {
       box-sizing:border-box
       padding: .1rem
       .icon-img-content
-        height:100%
+        height 100%
         display:block
         margin: 0 auto
     .icon-desc
