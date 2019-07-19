@@ -1,10 +1,10 @@
 <template>
   <div>
-    <HomeHeader></HomeHeader>
-    <HomSwiper></HomSwiper>
-    <HomeIcon></HomeIcon>
-    <HomeRecommended></HomeRecommended>
-    <HomeWeeked></HomeWeeked>
+    <HomeHeader :city='city'></HomeHeader>
+    <HomSwiper :swiperList='swiperList'></HomSwiper>
+    <HomeIcon :iconList='iconList'></HomeIcon>
+    <HomeRecommended :Recommendlist='Recommendlist'></HomeRecommended>
+    <HomeWeeked :Weeklist='Weeklist'></HomeWeeked>
   </div>
 
 </template>
@@ -25,6 +25,15 @@ export default {
     HomeRecommended,
     HomeWeeked
   },
+  data(){
+    return{
+      city:'',
+      swiperList:[],
+      iconList:[],
+      Recommendlist:[],
+      Weeklist:[]
+    }
+  },
   methods:{
     getHomeInfo(){
       axios.get('/api/Homedata.json')
@@ -32,7 +41,16 @@ export default {
         .catch(()=>{console.log('数据请求失败')})
     },
     getHomeJson(res){
+      res=res.data
       console.log(res)
+      // 判断城市显示与否   判断res是否请求成功，并且数据里有city属性
+      if(res.rest && res.data.city){
+        this.city=res.data.city,
+        this.swiperList=res.data.swiperList,
+        this.iconList=res.data.iconList,
+        this.Recommendlist=res.data.Recommendlist,
+        this.Weeklist=res.data.Weeklist
+      }
     }
   },
   mounted(){

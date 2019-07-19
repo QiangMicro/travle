@@ -6,14 +6,18 @@
       输入城市/景点/游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{this.city}}
       <i class="iconfont arr-icon">&#xe688;</i>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name:'HomeHeader'
+  name:'HomeHeader',
+  props:{
+    // city必须是string类型
+    city:String
+  }
 }
 </script>
 <style lang='stylus' scoped>
