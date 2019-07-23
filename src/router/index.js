@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/page/home/Home'
-import List from '@/page/list/List'
-
+import City from '@/page/cityrouter/city'
 Vue.use(Router)
 
 export default new Router({
@@ -11,11 +10,10 @@ export default new Router({
       path: '/',
       name: 'Home',
       component: Home
-    },
-    {
-      path: '/list',
-      name: 'List',
-      component: List
+    },{
+      path: '/cityrouter',
+      name: 'city',
+      component: City
     }
   ]
 })
