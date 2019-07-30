@@ -1,15 +1,20 @@
 <template>
   <div>
     <CityHeader></CityHeader>
-    <h2>城市</h2>
+    <CitySwitch></CitySwitch>
+    <CityList></CityList>
   </div>
 </template>
 <script>
 import CityHeader from '../cityrouter/components/CityHeader'
+import CitySwitch from '../cityrouter/components/CitySwitch'
+import CityList from '../cityrouter/components/CityList'
 export default {
   name:'City',
   components:{
-    CityHeader
+    CityHeader,
+    CitySwitch,
+    CityList
   }
 }
 </script>

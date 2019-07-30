@@ -4,9 +4,8 @@
       <router-link to='/'>
         <div class="iconfont header-back">&#xe606;</div>
       </router-link>
-    </div>    
+  </div>    
     
-  </div>
 </template>
 <script>
 export default {
