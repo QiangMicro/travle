@@ -3,7 +3,7 @@
     <CityHeader></CityHeader>
     <CitySwitch></CitySwitch>
     <CityList :hotCities='hotCities' :cities='cities'></CityList>
-    <List></List>
+    <List :cities='cities'></List>
   </div>
 </template>
 <script>
