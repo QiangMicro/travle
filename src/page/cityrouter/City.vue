@@ -2,11 +2,12 @@
   <div>
     <CityHeader></CityHeader>
     <CitySwitch></CitySwitch>
-    <CityList></CityList>
+    <CityList :hotCities='hotCities' :cities='cities'></CityList>
     <List></List>
   </div>
 </template>
 <script>
+import axios from 'axios'
 import CityHeader from '../cityrouter/components/CityHeader'
 import CitySwitch from '../cityrouter/components/CitySwitch'
 import CityList from '../cityrouter/components/CityList'
@@ -18,6 +19,30 @@ export default {
     CitySwitch,
     CityList,
     List
+  },
+  data(){
+    return{
+      // 城市
+      hotCities:[],
+      // 字母区分
+      cities:{}
+    }
+  },
+  methods:{
+    getCityInfo(){
+      axios.get('/api/city.json')
+        .then(this.getCitydate)
+    },
+    getCitydate(res){
+      res=res.data
+      if(res.data && res.ret){
+        this.hotCities=res.data.hotCities,
+        this.cities=res.data.cities
+      }
+    }
+  },
+  mounted(){
+    this.getCityInfo()
   }
 }
 </script>
