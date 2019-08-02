@@ -11,13 +11,15 @@
       </div>
       <div class="area">
         <div class="title  border-topbottom">热门城市</div>
+        <!-- 循环城市 -->
         <div class="button-list">
           <div class="button-wrapper"  v-for="item of hotCities" :key='item.id' >
             <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item,key) of cities" :key='key'>
+      <!-- 循环字母 -->
+      <div class="area" v-for="(item,key) of cities" :key='key' :ref='key'>
         <div class="title  border-topbottom" >{{key}}</div>
         <div class="item-list">
           <div class="item border-bottom" v-for='innerItem of item' :key='innerItem.id'>{{innerItem.name}}</div>
@@ -34,10 +36,24 @@ export default {
     // 热门城市
      hotCities:Array,
     // 按字母分城市
-    cities:Object
+    cities:Object,
+    // 同级组件传送的值
+    letter:String
   },
+  // BetterScroll第三方模块，监听时需要改变成this.BScroll
   mounted (){
     this.BScroll= new BScroll(this.$refs.wrapper)
+  },
+   // vue自带监听作用
+  watch:{
+    letter (){
+      // console.log(this.letter)
+      // console.log(this.$refs[this.letter][0])
+      if(this.letter){
+        const element=this.$refs[this.letter][0]
+        this.BScroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>

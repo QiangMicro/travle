@@ -2,8 +2,8 @@
   <div>
     <CityHeader></CityHeader>
     <CitySwitch></CitySwitch>
-    <CityList :hotCities='hotCities' :cities='cities' ></CityList>
-    <List :cities='cities'></List>
+    <CityList :hotCities='hotCities' :cities='cities' :letter='letter' ></CityList>
+    <List :cities='cities' @change="hadChegeItem"></List>
   </div>
 </template>
 <script>
@@ -20,7 +20,9 @@ export default {
       // 热门城市
       hotCities:[],
       // 按字母分城市
-      cities:{}
+      cities:{},
+      // 点击字母到指定区域
+      letter:""
     }
   },
   components:{
@@ -40,9 +42,13 @@ export default {
       if(res.ret && res.data){
         this.cities=res.data.cities,
         this.hotCities=res.data.hotCities
-      }
-      
+      }  
+    },
+    // letter为子组件传过来的值
+    hadChegeItem(letter){
+      this.letter=letter
     }
+    
   },
   mounted(){
     this.getCityAxios()
