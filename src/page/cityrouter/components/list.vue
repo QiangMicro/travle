@@ -48,8 +48,13 @@ export default {
       if(this.touchshow){
         // 首个字母距离顶部的距离
         const startY=this.$refs["A"][0].offsetTop
-        const toucheY=e.touches[0].clientY-79
-        console.log(toucheY)
+        // 手指区域距离顶部的高度
+        const touchY=e.touches[0].clientY-79
+        // 判断手指所在的下标
+        const index=-( Math.floor((startY-touchY)/20))
+        if(index>=0 && index<this.letters.length){
+          this.$emit('change',this.letters[index])
+        }
       }
     },
     hadtouchend(){
