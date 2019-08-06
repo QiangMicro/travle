@@ -1,10 +1,7 @@
 <template>
   <div class="switch">
     <div class="mp-tab-com">
-      <ul >
-        <li class="active" >境内</li>
-        <li>境外·港澳台</li>
-      </ul>
+      <input type="text" placeholder="城市搜索" class="inputs">
     </div>
     
   </div>
@@ -31,21 +28,10 @@ export default {
       line-height: .4rem;
       background-color: #00bcd4;
       padding: .2rem 1rem;
-      color: #fff
-      ul
-        border: 1px solid #fff;
-        border-radius: .03rem;
-        zoom: 1;
-        overflow: hidden
-        li
-          width: 50%;
-          float: left;
-          text-align: center;
-          background-color: #00bcd4;
-          font-size: .28rem;
-          color: #fff;
-        .active
-          background-color: #fff;
-          color: #00bcd4;
+      color: #666
+      .inputs
+        padding .05rem 
+        display block
+        width 90%
 </style>
 
