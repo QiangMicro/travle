@@ -25,3 +25,5 @@ vue项目总结
 五、安装轮播图插件vue-awesome-swiper   具体使用方法见链接：https://blog.csdn.net/u014027876/article/details/81663080
 
 六、BetterScroll第三方模块的使用
+
+七、Vuex使用：单向数据流
