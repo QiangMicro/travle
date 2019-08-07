@@ -1,6 +1,6 @@
 <template>
   <div>
-    <HomeHeader :city='city'></HomeHeader>
+    <HomeHeader></HomeHeader>
     <HomSwiper :swiperList='swiperList'></HomSwiper>
     <HomeIcon :iconList='iconList'></HomeIcon>
     <HomeRecommended :Recommendlist='Recommendlist'></HomeRecommended>
@@ -27,7 +27,6 @@ export default {
   },
   data(){
     return{
-      city:'',
       swiperList:[],
       iconList:[],
       Recommendlist:[],
@@ -44,8 +43,7 @@ export default {
       res=res.data
       console.log(res)
       // 判断城市显示与否   判断res是否请求成功，并且数据里有city属性
-      if(res.rest && res.data.city){
-        this.city=res.data.city,
+      if(res.rest ){
         this.swiperList=res.data.swiperList,
         this.iconList=res.data.iconList,
         this.Recommendlist=res.data.Recommendlist,

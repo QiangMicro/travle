@@ -38,7 +38,6 @@ export default {
     },
     getAxiosRes(res){
       res=res.data
-      console.log(res)
       if(res.ret && res.data){
         this.cities=res.data.cities,
         this.hotCities=res.data.hotCities
