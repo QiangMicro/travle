@@ -1,10 +1,11 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import state from './state'
+import mutations from './mutations'
 Vue.use(Vuex)
+
 export default new Vuex.Store({
-  state:{
-    city:'上海'
-  },
+  state,
   // 创建actions
   // actions:{
   //   changeCity(ctx,city){
@@ -13,13 +14,6 @@ export default new Vuex.Store({
   //   }
   // },
   // 创建mutations,改变数据
-  mutations:{
-    changeCity(state,city){
-      state.city=city
-    },
-    changeListCity(state,city){
-      state.city=city
-    }
-  }
+  mutations
 
 })

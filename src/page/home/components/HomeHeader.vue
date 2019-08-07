@@ -43,7 +43,8 @@ export default {
       padding:0 .3rem
       box-sizing:border-box
     .header-right
-      width:1.24rem
+      min-width:1.04rem
+      padding 0 .2rem
       float:right
       text-align:center
       color:#ffffff

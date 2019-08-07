@@ -27,3 +27,5 @@ vue项目总结
 六、BetterScroll第三方模块的使用
 
 七、Vuex使用：单向数据流
+
+八、keep-alive:是vue抽象组件，用来对组件进行缓存，节省性能，不会形成真实Dom渲染到页面上
