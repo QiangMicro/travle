@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="recommend-title ">猜你喜欢</div>
+    <div class="recommend-title ">
+      <i class="iconfont banner-icon">&#xe663;</i>
+      猜你喜欢
+    </div>
     <ul>
       <router-link 
         tag='li' 
@@ -40,6 +43,8 @@ export default {
     color: #212121;
     font-size: .32rem;
     padding 0 .1rem
+    .banner-icon
+      color red
   .item
     overflow:hidden
     display:flex

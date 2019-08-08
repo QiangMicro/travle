@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="recommend-title ">周末去那儿</div>
+    <div class="recommend-title ">
+      周末去那儿
+    </div>
     <ul>
       <li class="item border-bottom" v-for='item of Weeklist' :key='item.id'>
         <div class="item-img-wrapper">
