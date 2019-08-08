@@ -31,3 +31,7 @@ vue项目总结
 八、keep-alive:是vue抽象组件，用来对组件进行缓存，节省性能，不会形成真实Dom渲染到页面上
 
 九、详情页面编写
+
+注意：
+  
+  1、轮播显示隐藏后在计算宽度时会出现问题，需要做出修改：observeParents:true,observer:true

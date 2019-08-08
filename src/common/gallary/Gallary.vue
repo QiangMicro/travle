@@ -38,7 +38,10 @@ export default {
         // 分页器样式
         paginationType:'fraction',
         // 左右拖动
-        loop: true  
+        loop: true,
+        // 父组件发生变化时swiper组件跟着变化
+        observeParents:true,
+        observer:true
       }
     }
   }
