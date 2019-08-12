@@ -11,6 +11,7 @@
     <div 
       class="header-fixed" 
       v-show='!showAbc'
+      :style="opacityStyle"
     >
       景点详情
       <router-link to='/'>
@@ -25,16 +26,29 @@ export default {
   name:'DetailHeader',
   data(){
     return{
-      showAbc:true
+      showAbc:true,
+      opacityStyle:{
+        opacity:0
+      }
     }
   },
   methods:{
-    hadleScroll(){
-      console.log(document.documentElement.scrollTop)
+    hadScroll(){
+      const top =document.documentElement.scrollTop
+      if(top>60 ){
+        let opacity=top/140
+        opacity=opacity>1?1:opacity
+        this.opacityStyle={
+          opacity
+        }
+        this.showAbc=false
+      }else{
+        this.showAbc=true
+      }
     }
   },
-  activated(){
-    window.addEventListener('scroll',this.hadleScroll)
+  created(){
+    window.addEventListener('scroll',this.hadScroll)
   }
 }
 </script>

@@ -28,9 +28,11 @@ vue项目总结
 
 七、Vuex使用：单向数据流
 
-八、keep-alive:是vue抽象组件，用来对组件进行缓存，节省性能，不会形成真实Dom渲染到页面上
+八、keep-alive:是vue抽象组件，用来对组件进行缓存，节省性能，不会形成真实Dom渲染到页面上 activated,deactivated
 
 九、详情页面编写
+
+真机调式：查看本机IP地址，修改package.json文件即可实现要当手机与项目在同一wifi内实现真机调式
 
 注意：
   
