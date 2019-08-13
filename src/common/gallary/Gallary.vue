@@ -2,7 +2,7 @@
   <div class="container" @click="hadClickImg">
     <div class="wrapper">
       <swiper :options="swiperOption" >
-        <swiper-slide v-for='(item,index) of imgs' :key="index" >
+        <swiper-slide v-for='(item,index) of gallaryImgs' :key="index" >
           <img class="gallaryImage" 
             :src='item' 
             alt="图片路径出错"
@@ -17,7 +17,7 @@
 export default {
   name:"CommonGallary",
   props:{
-    imgs:{
+    gallaryImgs:{
       type:Array,
       default(){
         return []

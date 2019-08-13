@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-   <router-view/>
+    <!--exclude取消不被缓存的组件  -->
+    <keep-alive exclude="Detail">
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 

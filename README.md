@@ -32,6 +32,18 @@ vue项目总结
 
 九、递归组件：组件自身调用其组件，适用于二级菜单
 
+十、动态获取ID，{params:{d:this.$route.params.id}}
+
+十一、前后端联调：使用proxyTable: {
+      '/api':{
+        target:'http://localhost:8080'
+      }
+      target后写IP地址或是域名
+
+十二、打包上线：npm run build对原代码进行编辑，生成能被浏览器运行并且是压缩过后的代码  Build complete.提示打包成功，生成dis文件夹，将dis文件夹放到后台根目录即可
+
+十三、异步组件：需要什么组件加载什么组件，app组件过大时再使用异步组件
+
 真机调式：查看本机IP地址，修改package.json文件即可实现要当手机与项目在同一wifi内实现真机调式
 
 注意：

@@ -21,5 +21,10 @@ export default new Router({
       name: 'detail',
       component: Detail
     }
-  ]
+  ],
+  // 切换路由时路由页面在页面顶部
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
+
 })
