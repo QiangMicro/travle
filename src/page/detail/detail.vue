@@ -24,7 +24,10 @@ export default {
         title:'成人票',
         children:[
           {
-            title:'成人三馆联票'
+            title:'成人三馆联票',
+             children:[
+               {title:'成人三馆联票——北京连锁店'}
+             ]
           },{
             title:'成人五馆联票'
           },
